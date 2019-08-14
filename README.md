@@ -16,6 +16,7 @@
 |name|string|null: false|
 ### Association
 - has_many :messages
+- has_many :groups-users
 - has_many :users, though: :groups-users
 
 ## messagesテーブル
