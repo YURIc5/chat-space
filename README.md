@@ -8,6 +8,7 @@
 |user_name|string|null: false,add_index|
 ### Association
 - has_many :messages
+- has_many :groups-users
 - has_many :groups, though: :groups-users
 
 ## groupsテーブル
