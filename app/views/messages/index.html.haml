@@ -5,23 +5,15 @@
     .main-header
       .main-header__left-box
         %h2.main-header__left-box__current-group{}
-          sample
+          =@group.name
         %ul.main-header__left-box__member-list
           Member：
-          %li.main-header__left-box__member-list__member YURI
+          %li.main-header__left-box__member-list__member
+          = @group.users
       = link_to edit_user_path(@group.id) do
         .main-header__edit-btn Edit
     .messages
-      .message
-        .message__upper-info 
-          %p.message__upper-info__talker YURI
-          %p.message__upper-info__date 2019/08/18(sun) 19:08:28
-        %p.message__text こんにちは！
-      .message
-        .message__upper-info 
-          %p.message__upper-info__talker YURI
-          %p.message__upper-info__date 2019/08/19(mon) 19:08:28
-        %p.message__text こんにちは！
+      = render @messages
     .form
       = form_for [@group, @message] do |f|
         .input-box
