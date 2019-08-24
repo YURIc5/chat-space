@@ -1,4 +1,16 @@
 $(function(){
+  function buildMessage(message){
+    var html = `<p class="message__upper-info__talker">
+                  ${message.user_name}
+                </p>
+                <p class="message__upper-info__date">
+                ${message.date}
+                </p>
+                <p class="message__text">
+                  ${message.content}
+                </p>`
+    return html;
+  }
   $('#new_message').on('submit',function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -10,6 +22,13 @@ $(function(){
       dataType: 'json',
       processData: false,
       contentType: false
+    })
+    .done(function(message){
+      var html = buildMessage(message);
+      $('.messages').append(html);
+    })
+    .fail(function(){
+      alert('error');
     })
   })
 });
