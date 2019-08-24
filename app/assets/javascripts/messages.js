@@ -26,6 +26,7 @@ $(function(){
     .done(function(message){
       var html = buildMessage(message);
       $('.messages').append(html);
+      $('#message_content').val('')
     })
     .fail(function(){
       alert('error');
