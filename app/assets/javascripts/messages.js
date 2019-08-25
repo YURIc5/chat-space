@@ -20,7 +20,6 @@ $(document).on('turbolinks:load',function(){
                 </div>`
     return html;
   }
-  
   $('#new_message').on('submit',function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -39,6 +38,7 @@ $(document).on('turbolinks:load',function(){
       $('#message_content').val('')
       $('.submit-btn').prop('disabled', false);
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+      $('#new_message')[0].reset();
     })
     .fail(function(){
       alert('error');
