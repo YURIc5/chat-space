@@ -6,6 +6,15 @@ $(function() {
                 </div>`
     $('#user-search-result').append(html);
   }
+  
+  function appendErrMsgToHTML(alert){
+    var html = `<div class="chat-group-user clearfix">
+                  <p class="chat-group-user__name">${alert}</p>
+                </div>`
+    $('#user-search-result').append(html);
+  }
+
+
 
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
