@@ -13,16 +13,7 @@ $(function() {
                 </div>`
     $('#user-search-result').append(html);
   }
-  
-  function addUser(userId,userName){
-    var html = `<div class="chat-group-users js-add-user">
-                  <div class="chat-group-user clearfix js-chat-member" id="${userId}">
-                    <input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids">
-                    <p class="chat-group-user__name">${userName}</p>
-                  </div>
-                </div>`
-    $('.chat-group-users').append(html);
-  }
+
 
 
   $("#user-search-field").on("keyup", function() {
@@ -51,10 +42,7 @@ $(function() {
 
     $(document).on("click", ".user-search-add", function(){
     $('.chat-group-user').val();
-    var userId = $(this).data('user-id');
-    var userName = $(this).data('user-name');
-    addUser(userId,userName);
-    $(this).parent().remove();
+    
     });
   });
 });
