@@ -7,14 +7,12 @@ $(document).on('turbolinks:load',function(){
                   </div>`
       $('.user-search-result').append(html);
     }
-    
     function appendErrMsgToHTML(alert){
       var html = `<div class="chat-group-user clearfix">
                     <p class="chat-group-user__name">${alert}</p>
                   </div>`
       $('.user-search-result').append(html);
     }
-
     function addUser(userId,userName){
       var html = `<div class="chat-group-user">
                       <input name="group[user_ids][]" type="hidden" value="${userId}">
@@ -23,14 +21,12 @@ $(document).on('turbolinks:load',function(){
                   </div>`
       $('#sarch-users').append(html);
     }
-
     function removeUser(userId,userName){
       var html = `<div class="chat-group-user clearfix">
                     <p class="chat-group-user__name">${user.name}</p>
                     <a class="user-search-add.chat-group-user__btn.chat-group-user__btn--add.data-user-id="${user.id}" data-user-name=${user.name}>追加</a>
                 　</div>`
   　　$('.user-search-result').append(html);
-
     }
   // 検索のイベント
     $("#user-search-field").on("keyup", function() {
@@ -64,7 +60,6 @@ $(document).on('turbolinks:load',function(){
       addUser(userId,userName);
       $(this).parent().remove();
       });
-
     // サーチ画面を消すイベント
       $(document).on("click", ".user-search-remove", function () {
         $(this).parent().remove();
