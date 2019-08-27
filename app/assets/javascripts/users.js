@@ -26,9 +26,9 @@ $(document).on('turbolinks:load',function(){
                     <p class="chat-group-user__name">${user.name}</p>
                     <a class="user-search-add.chat-group-user__btn.chat-group-user__btn--add.data-user-id="${user.id}" data-user-name=${user.name}>追加</a>
                 　</div>`
-  　　$('.user-search-result').append(html);
+    　　$('.user-search-result').append(html);
     }
-  // 検索のイベント
+    // 検索のイベント
     $("#user-search-field").on("keyup", function() {
       var input = $("#user-search-field").val();
       $.ajax({
@@ -60,7 +60,7 @@ $(document).on('turbolinks:load',function(){
     addUser(userId,userName);
     $(this).parent().remove();
     });
-   // サーチ画面を消すイベント
+    // サーチ画面を消すイベント
     $(document).on("click", ".user-search-remove", function () {
       $(this).parent().remove();
     });
