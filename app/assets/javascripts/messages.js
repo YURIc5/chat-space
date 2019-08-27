@@ -44,8 +44,7 @@ $(document).on('turbolinks:load',function(){
       $('.submit-btn').prop('disabled', false);
     })
   })
-
-// 自動更新
+  // 自動更新
   var reloadMessages = function() {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
     last_message_id = message.id
@@ -65,6 +64,7 @@ $(document).on('turbolinks:load',function(){
       console.log('error');
     });
   };
+  setInterval(reloadMessages, 5000);
 });
 
 
