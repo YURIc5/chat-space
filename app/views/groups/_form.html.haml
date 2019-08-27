@@ -26,7 +26,7 @@
       #sarch-users
         - @group.users.each do |group_users|
           .chat-group-user
-            %input{name: "group[user_ids][]", type: "hidden",value:"#{group_users.name}"}/
+            %input{name: "group[user_ids][]", type: "hidden"}/
             %p.chat-group-user__name
               =group_users.name
             .user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn
