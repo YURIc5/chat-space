@@ -55,7 +55,8 @@ $(document).on('turbolinks:load',function(){
       .fail(function() {
         alert('ユーザー検索に失敗しました');
       })
-  // ユーザー追加のイベント
+    });
+    // ユーザー追加のイベント
       $(document).on("click", ".user-search-add", function(){
       $('.chat-group-user').val();
       var userId = $(this).data('user-id');
@@ -64,10 +65,9 @@ $(document).on('turbolinks:load',function(){
       $(this).parent().remove();
       });
 
-  // サーチ画面を消すイベント
+    // サーチ画面を消すイベント
       $(document).on("click", ".user-search-remove", function () {
         $(this).parent().remove();
       });
-    });
   });
 });
