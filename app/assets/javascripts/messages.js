@@ -46,4 +46,4 @@ $(document).on('turbolinks:load',function(){
   })
 });
 
-
+// 自動更新
