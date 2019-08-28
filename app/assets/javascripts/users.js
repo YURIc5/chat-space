@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load',function(){
-  $(function() {
+
     function appendUser(user){
       var html = `<div class="chat-group-user clearfix">
                     <p class="chat-group-user__name">${user.name}</p>
@@ -53,16 +53,14 @@ $(document).on('turbolinks:load',function(){
       })
     });
     // ユーザー追加のイベント
-    $(document).on("click", ".user-search-add", function(){
-    $('.chat-group-user').val();
+    $(".user-search-result").on("click", ".chat-group-user__btn--add", function(){
     var userId = $(this).data('user-id');
     var userName = $(this).data('user-name');
-    addUser(userId,userName);
     $(this).parent().remove();
+    addUser(userId,userName);
     });
     // サーチ画面を消すイベント
     $(document).on("click", ".user-search-remove", function () {
       $(this).parent().remove();
     });
-  });
 });
