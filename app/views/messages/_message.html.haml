@@ -1,5 +1,5 @@
-.message
-  .message__upper-info 
+.message{"data-id": "#{message.id}"}
+  .message__upper-info
     %p.message__upper-info__talker
       = message.user.name
     %p.message__upper-info__date
@@ -9,4 +9,3 @@
       %p.message__text
         = message.content
   = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
-
