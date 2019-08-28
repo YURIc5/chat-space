@@ -21,7 +21,6 @@ $(document).on('turbolinks:load',function(){
                 </div>`
     return html;
   }
-});
   $('#new_message').on('submit',function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -46,7 +45,6 @@ $(document).on('turbolinks:load',function(){
       $('.submit-btn').prop('disabled', false);
     })
   })
-$(document).on('turbolinks:load',function(){
   // 自動更新
   var reloadMessages = function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
