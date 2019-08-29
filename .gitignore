@@ -25,3 +25,5 @@ public/**/**.gif
 
 *~
 .DS_Store
+
+config/secrets.yml
